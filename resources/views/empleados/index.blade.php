@@ -11,7 +11,8 @@
 
 <h3>Listado de Empleados</h3>
 <a href="{{ route('empleados.create')}}" class="btn btn-primary pull-right">
-	<span class="glyphicon glyphicon-user"></span>	Crear
+	<span class="glyphicon glyphicon-user"></span>
+	Crear
 </a>
 
 <table class="table table-striped">
@@ -33,12 +34,15 @@
 				<td>{{$empleado->area->nombre}}</td>
 				<td>{{$empleado->boletin}}</td>
 				<td>
-					<a href="{{ route('empleados.edit',$empleado)}}">Editar</a>
+					<a href="{{ route('empleados.edit',$empleado)}}" class="btn btn-primary btn-sm">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 				</td>
 				<td>
 					{!!Form::open(['route' => ['empleados.destroy',$empleado],'method'=>'DELETE'])!!}
-						<input type="submit" value="Eliminar" class="btn btn-xs">
-						<button type="submit" class="btn btn-xs"></button>
+						<button type="submit" class="btn btn-danger btn-sm">
+							<span class="glyphicon glyphicon-remove"></span>
+						</button>
 					{!!Form::close()!!}
 				</td>
 			</tr>

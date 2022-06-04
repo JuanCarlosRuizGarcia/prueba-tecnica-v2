@@ -11,7 +11,7 @@
 	Los campos con asterisco (*) son obligatorios
 </div>
 
-{!!Form::model($empleado, ['route' => ['empleados.update',$empleado],'method' => 'PUT'])!!}
+{!!Form::model($empleado, ['route' => ['empleados.update',$empleado],'method' => 'PUT', 'id'=>'form'])!!}
 	@include('empleados.partials.form')
 {!!Form::close()!!}
 

@@ -10,7 +10,7 @@
 <div class="alert alert-info">
 	Los campos con asterisco (*) son obligatorios
 </div>
-{!!Form::open(['route' => ['empleados.store'], 'method' => 'POST'])!!}
+{!!Form::open(['route' => ['empleados.store'], 'method' => 'POST', 'id'=>'form'])!!}
 	@include('empleados.partials.form')
 {!!Form::close()!!}
 @stop
