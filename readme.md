@@ -24,21 +24,21 @@ abrir el proyecto en el IDE de su preferencia ya sea Sublime Text, Visual Studio
 **IDE**
 Una vez seleccionado el IDE de su preferencia ubicar el archivo .env, se encontrara con la siguiente seccion 
 
--**DB_CONNECTION=mysql**
--**DB_HOST=127.0.0.1**
--**DB_PORT=3306**
--**DB_DATABASE=root**
--**DB_USERNAME=root**
--**DB_PASSWORD=root**
+- **DB_CONNECTION=mysql**
+- **DB_HOST=127.0.0.1**
+- **DB_PORT=3306**
+- **DB_DATABASE=root**
+- **DB_USERNAME=root**
+- **DB_PASSWORD=root**
 
 modificarlo de la siguiente manera 
 
--**DB_CONNECTION=mysql**
--**DB_HOST=127.0.0.1**
--**DB_PORT=3306**
--**DB_DATABASE=prueba_tecnica_dev**
--**DB_USERNAME=root**
--**DB_PASSWORD=**
+- **DB_CONNECTION=mysql**
+- **DB_HOST=127.0.0.1**
+- **DB_PORT=3306**
+- **DB_DATABASE=prueba_tecnica_dev**
+- **DB_USERNAME=root**
+- **DB_PASSWORD=**
 
 colocar password si lo tiene configurado con contraseña, si no lo tiene dejarlo en blanco
 
