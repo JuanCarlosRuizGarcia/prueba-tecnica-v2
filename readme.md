@@ -1,58 +1,66 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Ejecucion aplicativo
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+para poder hacer uso de la pagina realizada se debe tener los siguientes items
 
-## About Laravel
+**Instalacion**
+- Laragon
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Descargar e instalar Laragon, dirijirse a la siguiente url para descargalo https://laragon.org/download/index.html
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+una vez instalado laragon traera un paquete de software necesario para su utilizacion y adicionalmente nos creara host virtuales, ubicar los proyectos en la carpeta www
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+**Carpeta**
+- C:\laragon\www
 
-## Learning Laravel
+descargar el repositorio dentro de la carpeta www, luego  abrir el panel de Laragon y dar click en Iniciar Todo esperar a que inicie los servidor
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+**Base de datos **
+Abrir la base de datos en mysql y ejecutar el scripts base-de-datos-prueba-tecnica-dev.sql o importar el archivo sql en un gestor de base de datos heidiSQL o phpMyAdmin o el de su preferencia
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+revisar que se haya creado la base de datos prueba_tecnica_dev junto con las tablas, relaciones e insercion de datos una vez completado esa parte
 
-## Laravel Sponsors
+abrir el proyecto en el IDE de su preferencia ya sea Sublime Text, Visual Studio Code, PhpStorm, etc
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+**IDE **
+Una vez seleccionado el IDE de su preferencia ubicar el archivo .env, se encontrara con la siguiente seccion 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=root
+DB_USERNAME=root
+DB_PASSWORD=root
 
-## Contributing
+modificarlo de la siguiente manera 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=prueba_tecnica_dev
+DB_USERNAME=root
+DB_PASSWORD=**
 
-## Security Vulnerabilities
+colocar password si lo tiene configurado con contraseña, si no lo tiene dejarlo en blanco
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**Laragon**
+abrir el panel de laragon, dar click en Terminal o presionar las teclas  (CTRL + ALT + T) se le presentara la siguiente interfaz **control de cuentas de Usuario** dar click en si, dirigir a la carpeta del proyecto y digitar el siguiente comando 
 
-## License
+**Ejemplo **
+Carpeta o proyecto **blog**
+C:\laragon\www\blog
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+ **Comando** php artisan serve
+ 
+ **Aplicacion **
+ copiar la url en el navegador de su preferencia y pegarla, ahi otra forma de ver la pagina y es colocar el nombre del proyecto seguido de .test
+ 
+ **Ejemplo**
+C:\laragon\www\blog => en el navegador colocamos el blog.test haciendo referencia a blog como proyecto
+
+C:\laragon\www\relaciones => relaciones.test
+
+Realizado este punto ya puede hacer uso del proyecto realizado
+
+
+
