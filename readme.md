@@ -25,12 +25,12 @@ git clone https://github.com/JuanCarlosRuizGarcia/prueba-tecnica-v2.git
 # **Ejecucion de Laragon**
 
 
-Al ejecutar laragon veras un panel con varios botones en la parte inferior, haz clic en iniciar todo y se mostrara la interfaz de **control de cuentas de Usuario** y da clic en Si, tambien se mostrara una interfaz de permisos de firewall de le los permisos necesarios.
+Al ejecutar laragon veras un panel con varios botones en la parte inferior, haz clic en iniciar todo y se mostrara la interfaz de **control de cuentas de Usuario** y da clic en Si, tambien se mostrara una interfaz de permisos de firewall de le los permisos necesarios, asegurate que en el panel de laragon se vean todos los servicios en ejecucion.
 
 
 **Base de datos**
 
-En el panel de laragon haga clic en el boton de base de datos y se ejecutara haidy, y cargue el script base-de-datos-prueba-tecnica-dev.sql o importar el archivo sql en el gestor de base de datos de preferencia
+En el panel de laragon haga clic en el boton de base de datos y se ejecutara haidy,cree una nueva conexion a la base de datos y cargue el script base-de-datos-prueba-tecnica-dev.sql.
 
 revisar que se haya creado la base de datos prueba_tecnica_dev junto con las tablas, relaciones e insercion de datos una vez completado esa parte
 
@@ -64,7 +64,11 @@ DB_PASSWORD=
 
 colocar password si lo tiene configurado con contraseña, si no lo tiene dejarlo en blanco
 
-Luego dirijase al panel de laragon y de clic en terminal y dirijase dentro de la carpeta del proyecto y ejecute los siguientes comandoss
+Luego dirijase al panel de laragon y de clic en terminal y dirijase dentro de la carpeta del proyecto y ejecute los siguientes comandos
+
+```bash
+cd C:\laragon\www\NOMBREPROYECTO
+```
 
 ```bash
 composer install
@@ -73,6 +77,11 @@ composer install
 ```bash
 php artisan key:generate
 ```
+Deberias ver el siguiente mensaje (Ejemplo):
+```
+Application key [base64:ntJfFGjBFw9+GB9ifU6oSCvuhVe54tDMNUquaJCoevo=] set successfully.php artisan serve
+```
+
 ```bash
 php artisan serve
 ```
@@ -84,12 +93,4 @@ Laravel development server started: <http://127.0.0.1:8000>
 ```
  **Aplicacion**
 
-Ahora  la url en el navegador de su preferencia y pegarla, ahi otra forma de ver la pagina y es colocar el nombre del proyecto seguido de .test
- 
- **Ejemplo**
- 
-C:\laragon\www\blog => en el navegador colocamos el blog.test haciendo referencia a blog como proyecto
-
-C:\laragon\www\relaciones => relaciones.test
-
-Realizado este punto ya puede hacer uso del proyecto realizado
+Ahora  la url en el navegador de su preferencia y pegarla para comenzar a usar la aplicacion
