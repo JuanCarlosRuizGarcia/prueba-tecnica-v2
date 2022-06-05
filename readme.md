@@ -1,61 +1,93 @@
-# Ejecucion aplicativo
+# Guia de ejecucion del aplicativo
 
-para poder hacer uso de la pagina realizada se debe tener los siguientes items
+Para poder hacer uso de la pagina realizada se debe tener los siguientes items
 
-**Instalacion**
-- Laragon
+## **Instalacion**
 
-Descargar e instalar Laragon, dirijirse a la siguiente url para descargalo https://laragon.org/download/index.html
+Descargar e instalar Laragon (Instale la version Full), dirijirse a la siguiente url para descargalo https://laragon.org/download/index.html
 
-una vez instalado laragon traera un paquete de software necesario para su utilizacion y adicionalmente nos creara host virtuales, ubicar los proyectos en la carpeta www
+Una vez instalado laragon traera un paquete de software necesario para su utilizacion y adicionalmente nos creara host virtuales, los proyectos seran almacenamos en la carpeta www y se encuentran en la ruta:
 
-**Carpeta**
 - C:\laragon\www
 
-descargar el repositorio dentro de la carpeta www, luego  abrir el panel de Laragon y dar click en Iniciar Todo esperar a que inicie los servidor
+Para dirigirse a la carpeta ejecute el siguiente comando
+
+```bash
+cd C:\laragon\www
+```
+
+Descargar el repositorio dentro de la carpeta www:
+
+```bash
+git clone https://github.com/JuanCarlosRuizGarcia/prueba-tecnica-v2.git
+```
+
+# **Ejecucion de Laragon**
+
+
+Al ejecutar laragon veras un panel con varios botones en la parte inferior, haz clic en iniciar todo y se mostrara la interfaz de **control de cuentas de Usuario** y da clic en Si, tambien se mostrara una interfaz de permisos de firewall de le los permisos necesarios.
+
 
 **Base de datos**
-Abrir la base de datos en mysql y ejecutar el scripts base-de-datos-prueba-tecnica-dev.sql o importar el archivo sql en un gestor de base de datos heidiSQL o phpMyAdmin o el de su preferencia
+
+En el panel de laragon haga clic en el boton de base de datos y se ejecutara haidy, y cargue el script base-de-datos-prueba-tecnica-dev.sql o importar el archivo sql en el gestor de base de datos de preferencia
 
 revisar que se haya creado la base de datos prueba_tecnica_dev junto con las tablas, relaciones e insercion de datos una vez completado esa parte
 
 abrir el proyecto en el IDE de su preferencia ya sea Sublime Text, Visual Studio Code, PhpStorm, etc
 
 **IDE**
-Una vez seleccionado el IDE de su preferencia ubicar el archivo .env, se encontrara con la siguiente seccion 
+Una vez seleccionado el IDE de su preferencia abra el archivo .env.example y copie su contenido y cree un archivo .env en la raiz del proyecto y pegue lo que copio del archivo .env.example
 
-- **DB_CONNECTION=mysql**
-- **DB_HOST=127.0.0.1**
-- **DB_PORT=3306**
-- **DB_DATABASE=root**
-- **DB_USERNAME=root**
-- **DB_PASSWORD=root**
+Dirijase a esta parte donde veras la configuracion de la base de datos
 
-modificarlo de la siguiente manera 
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=root
+DB_USERNAME=root
+DB_PASSWORD=root
+```
 
-- **DB_CONNECTION=mysql**
-- **DB_HOST=127.0.0.1**
-- **DB_PORT=3306**
-- **DB_DATABASE=prueba_tecnica_dev**
-- **DB_USERNAME=root**
-- **DB_PASSWORD=**
+
+y reemplazela por esta
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=prueba_tecnica_dev
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
 colocar password si lo tiene configurado con contraseña, si no lo tiene dejarlo en blanco
 
-**Laragon**
-abrir el panel de laragon, dar click en Terminal o presionar las teclas  (CTRL + ALT + T) se le presentara la siguiente interfaz **control de cuentas de Usuario** dar click en si, dirigir a la carpeta del proyecto y digitar el siguiente comando 
+Luego dirijase al panel de laragon y de clic en terminal y dirijase dentro de la carpeta del proyecto y ejecute los siguientes comandoss
 
-**Ejemplo**
-Carpeta o proyecto **blog**
-C:\laragon\www\blog
+```bash
+composer install
+```
 
+```bash
+php artisan key:generate
+```
+```bash
+php artisan serve
+```
 
- **Comando** php artisan serve
- 
+Luego de haber ejecutado los comandos anteriores usted podra visuaizar en la consola este mensaje similar
+```bash
+Laravel development server started: <http://127.0.0.1:8000>
+[Sun Jun  5 02:47:39 2022] PHP 7.4.19 Development Server (http://127.0.0.1:8000) started
+```
  **Aplicacion**
- copiar la url en el navegador de su preferencia y pegarla, ahi otra forma de ver la pagina y es colocar el nombre del proyecto seguido de .test
+
+Ahora  la url en el navegador de su preferencia y pegarla, ahi otra forma de ver la pagina y es colocar el nombre del proyecto seguido de .test
  
  **Ejemplo**
+ 
 C:\laragon\www\blog => en el navegador colocamos el blog.test haciendo referencia a blog como proyecto
 
 C:\laragon\www\relaciones => relaciones.test
